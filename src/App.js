@@ -20,8 +20,15 @@ import Logo from "./images/logo.svg";
 export default function ComingSoon() {
   return (
     <div className="container">
+      <img src={Logo} alt="Logo of Base Apparel" className="logo" />
+      <picture className="img-hero">
+        <source media="(max-width:375px)" srcSet={HeroMobile} />
+        <img
+          src={HeroDesktop}
+          alt="Portrait of a girl with short hair wearing light orange T-shirt"
+        />
+      </picture>
       <div className="text-content">
-        <img src={Logo} alt="Logo of Base Apparel" className="logo" />
         <h1>
           <span className="h1-color">We're</span> <br />
           <span>coming</span> <br />
@@ -43,10 +50,6 @@ export default function ComingSoon() {
           </button>
         </form>
       </div>
-      <img
-        src={HeroDesktop}
-        alt="Portrait of a girl with short hair wearing light orange T-shirt"
-      />
     </div>
   );
 }
