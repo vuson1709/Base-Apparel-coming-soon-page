@@ -79,6 +79,8 @@ p {
 /* ============ FORM ============= */
 .form-email {
   position: relative;
+  border-radius: 30px;
+  border: 1px solid var(--desaturated-red);
 }
 
 .input-email {
@@ -88,12 +90,16 @@ p {
   height: 55px;
   padding: 15px 30px;
   border-radius: 30px;
-  border: 1px solid var(--desaturated-red);
+  border: unset;
 }
 
 .input-email::placeholder {
   color: var(--desaturated-red);
   opacity: 0.7;
+}
+
+.input-email:focus-visible {
+  outline: none;
 }
 
 .btn-email {
@@ -114,6 +120,27 @@ p {
 
 .btn-email:active {
   box-shadow: -1px 10px 20px 6px hsla(0, 74%, 74%, 0.4);
+}
+
+/* ============ Error state ============= */
+.invalid-email {
+  border: 1px solid var(--soft-red);
+}
+
+.invalid-email::before {
+  content: "Please provide a valid email";
+  color: var(--soft-red);
+  position: absolute;
+  bottom: -25px;
+  left: 30px;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.icon-error {
+  position: absolute;
+  right: 120px;
+  top: 15px;
 }
 
 @media only screen and (max-width: 375px) {
