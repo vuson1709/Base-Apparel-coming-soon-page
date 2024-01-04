@@ -1,5 +1,5 @@
 /* 
-We're coming soon Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals. Email Address
+ Email Address
 
 Your users should be able to:
 
@@ -10,6 +10,43 @@ The input field is empty
 The email address is not formatted correctly
 */
 
+import BackgroundDesktop from "./images/bg-pattern-desktop.svg";
+import HeroDesktop from "./images/hero-desktop.jpg";
+import HeroMobile from "./images/hero-mobile.jpg";
+import IconArrow from "./images/icon-arrow.svg";
+import IconError from "./images/icon-error.svg";
+import Logo from "./images/logo.svg";
+
 export default function ComingSoon() {
-  return <div>hello</div>;
+  return (
+    <div className="container">
+      <div className="text-content">
+        <img src={Logo} alt="Logo of Base Apparel" className="logo" />
+        <h1>
+          <span className="h1-color">We're</span> <br />
+          <span>coming</span> <br />
+          <span>soon</span>
+        </h1>
+        <p>
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
+        <form className="form-email">
+          <input
+            type="email"
+            placeholder="Email Address"
+            className="input-email"
+          />
+          <button className="btn-email">
+            <img src={IconArrow} alt="Arrow Icon" />
+          </button>
+        </form>
+      </div>
+      <img
+        src={HeroDesktop}
+        alt="Portrait of a girl with short hair wearing light orange T-shirt"
+      />
+    </div>
+  );
 }
