@@ -1,5 +1,5 @@
 /* 
- Email Address
+NOTE: Check again background img in Desktop
 
 Your users should be able to:
 
@@ -10,7 +10,6 @@ The input field is empty
 The email address is not formatted correctly
 */
 
-import BackgroundDesktop from "./images/bg-pattern-desktop.svg";
 import HeroDesktop from "./images/hero-desktop.jpg";
 import HeroMobile from "./images/hero-mobile.jpg";
 import IconArrow from "./images/icon-arrow.svg";
@@ -18,6 +17,10 @@ import IconError from "./images/icon-error.svg";
 import Logo from "./images/logo.svg";
 
 export default function ComingSoon() {
+  function handleEmailSubmit(e) {
+    e.preventDefault();
+  }
+
   return (
     <div className="container">
       <img src={Logo} alt="Logo of Base Apparel" className="logo" />
@@ -39,7 +42,7 @@ export default function ComingSoon() {
           Add your email below to stay up-to-date with announcements and our
           launch deals.
         </p>
-        <form className="form-email">
+        <form className="form-email" onSubmit={handleEmailSubmit}>
           <input
             type="email"
             placeholder="Email Address"
